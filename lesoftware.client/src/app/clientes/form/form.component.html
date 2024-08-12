@@ -1,0 +1,81 @@
+<form (ngSubmit)="OnSubmit()" #clienteForm="ngForm">
+    <div class="row">
+        <div class="col">
+            <div>
+                <label>Nombre</label>
+                <input
+                class="form-control my-2"
+                placeholder="Nombre"
+                name="nombre"
+                [(ngModel)]="cliente.nombre"
+                #nombre="ngModel"
+                required
+                >
+                <div *ngIf="nombre.invalid && (nombre.dirty || nombre.touched)" class="text-danger">
+                    <div>
+                        Nombre es requerido
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div>
+                <label>Password</label>
+                <input
+                class="form-control my-2"
+                placeholder="Password"
+                name="password"
+                [(ngModel)]="cliente.password"
+                #password="ngModel"
+                required
+                >
+                <div *ngIf="password.invalid && (password.dirty || password.touched)" class="text-danger">
+                    <div>
+                        Password es requerido
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col">
+            <div>
+                <label>Apellidos</label>
+                <input
+                class="form-control my-2"
+                placeholder="Apellidos"
+                name="apellidos"
+                [(ngModel)]="cliente.apellidos"
+                #apellidos="ngModel"
+                required
+                >
+                <div *ngIf="apellidos.invalid && (apellidos.dirty || apellidos.touched)" class="text-danger">
+                    <div>
+                        Apellidos es requerido
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div>
+                <label>Dirección</label>
+                <input
+                class="form-control my-2"
+                placeholder="Direccion"
+                name="direccion"
+                [(ngModel)]="cliente.direccion"
+                #direccion="ngModel"
+                required
+                >
+                <div *ngIf="direccion.invalid && (direccion.dirty || direccion.touched)" class="text-danger">
+                    <div>
+                        Direccion es requerido
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div >
+        <button [disabled]="!clienteForm.form.valid" type="submit" class="btn btn-primary">Guardar</button>
+        <button type="button" class="btn btn-success mx-2"(click)="clean()">Limpiar</button>
+    </div>
+</form>

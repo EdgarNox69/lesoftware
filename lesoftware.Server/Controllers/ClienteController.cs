@@ -99,7 +99,7 @@ namespace lesoftware.Server.Controllers
             context.Clientes.Remove(cliente);
             await context.SaveChangesAsync();
 
-            return Ok("Cliente eliminado exitosamente");
+            return Ok(cliente);
         }
     }
 }

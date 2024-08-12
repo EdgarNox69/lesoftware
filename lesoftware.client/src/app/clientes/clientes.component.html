@@ -1,0 +1,39 @@
+<div class="container col-md-10 col-sm-12"> 
+    <h2>Listado de usuarios</h2>
+    <div class="row">
+        <div id="formulario">
+            <cliente-form (newUserEvent)="addcliente($event)" [cliente]="clienteSelected"></cliente-form>
+            
+        </div>
+        <div class="table-responsive row my-4 ">
+
+            @if (clientes.length > 0){
+                
+                <table class="table table-hover table-striped table-bordered">
+                    <thead>
+                        <th>Nombre</th>
+                        <th>Apellidos</th>
+                        <th>Direccion</th>
+                        <th>Acciones</th>
+                    </thead>
+                    <tbody>
+                        @for (cliente of clientes; track $index) {
+                            <tr>
+                                <td>{{cliente.nombre}}</td>
+                                <td>{{cliente.apellidos}}</td>
+                                <td>{{cliente.direccion}}</td>
+                                <td>
+                                    <button class="btn btn-sm btn-secondary" (click)="onEditar(cliente)"><i class="bi bi-pencil-square"></i></button>
+                                    <button class="btn btn-sm btn-danger" (click)="onDelete(cliente)"><i class="bi bi-trash"></i></button>
+                                </td> 
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            }@else {
+                <div class="alert alert-info">Lo sentimos, no existen usuarios en el sistema!</div>
+            }
+        </div>
+    </div>
+    
+</div>

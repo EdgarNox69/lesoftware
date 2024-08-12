@@ -12,6 +12,7 @@ namespace lesoftware.Server.Utilities
             CreateMap<ClienteDTO, Cliente>().ReverseMap();
             CreateMap<TiendaDTO, Tiendum>().ReverseMap();
             CreateMap<ArticuloDTO, Articulo>().ReverseMap();
+            CreateMap<ClienteCredentials, Cliente>().ReverseMap();
         }
     }
 }

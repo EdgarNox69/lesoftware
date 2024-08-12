@@ -110,6 +110,10 @@ public partial class TiendaContext : DbContext
                 .HasMaxLength(100)
                 .IsUnicode(false)
                 .HasColumnName("nombre");
+            entity.Property(e => e.Password)
+                .HasMaxLength(100)
+                .IsUnicode(false)
+                .HasColumnName("password");
         });
 
         modelBuilder.Entity<ClienteArticulo>(entity =>

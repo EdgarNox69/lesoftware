@@ -1,9 +1,7 @@
 ﻿namespace lesoftware.Server.DTOs
 {
-    public class ClienteDTO
+    public class ClienteCredentials
     {
-        public int Id { get; set; }
-
         public string? Nombre { get; set; }
 
         public string? Password { get; set; }
