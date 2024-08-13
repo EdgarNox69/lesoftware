@@ -14,6 +14,7 @@ import { TiendasComponent } from './tiendas/tiendas.component';
 import { ArticulosComponent } from './articulos/articulos.component';
 import { ArticulosFormComponent } from './articulos/form/form.component';
 import { CarritoComponent } from './carrito/carrito.component';
+import { TiendaformComponent } from './tiendas/tiendaform/tiendaform.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { CarritoComponent } from './carrito/carrito.component';
     TiendasComponent,
     ArticulosComponent,
     ArticulosFormComponent,
-    CarritoComponent
+    CarritoComponent,
+    TiendaformComponent
   ],
   imports: [
     BrowserModule, HttpClientModule,

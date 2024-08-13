@@ -1,1 +1,38 @@
-<p>tiendas works!</p>
+<div class="container col-md-10 col-sm-12"> 
+    <h2>Listado de Tiendas</h2>
+    <div class="row">
+        <div id="formulario">
+            <app-tiendaform (newTiendaEvent)="addTienda($event)" [tienda]="tiendaSelected"></app-tiendaform>
+            
+        </div>
+        <div class="table-responsive row my-4 ">
+
+            @if (tiendas.length > 0){
+                
+                <table class="table table-hover table-striped table-bordered">
+                    <thead>
+                        <th>Sucursal</th>
+                        <th>Direccion</th>
+                        <th>Acciones</th>
+                    </thead>
+                    <tbody>
+                        @for (tienda of tiendas; track $index) {
+                            <tr>
+                                <td>{{tienda.sucursal}}</td>
+                                <td>{{tienda.direccion}}</td>
+                             
+                                <td>
+                                    <button class="btn btn-sm btn-secondary" (click)="onEditar(tienda)"><i class="bi bi-pencil-square"></i></button>
+                                    <button class="btn btn-sm btn-danger" (click)="onDelete(tienda)"><i class="bi bi-trash"></i></button>
+                                </td> 
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            }@else {
+                <div class="alert alert-info">Lo sentimos, no existen usuarios en el sistema!</div>
+            }
+        </div>
+    </div>
+    
+</div>

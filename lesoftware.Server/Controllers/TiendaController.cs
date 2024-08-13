@@ -99,7 +99,7 @@ namespace lesoftware.Server.Controllers
             context.Tienda.Remove(tienda);
             await context.SaveChangesAsync();
 
-            return Ok("Tienda eliminada exitosamente");
+            return Ok(tienda);
         }
 
     }

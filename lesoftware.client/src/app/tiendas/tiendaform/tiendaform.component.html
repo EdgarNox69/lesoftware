@@ -1,0 +1,44 @@
+<form (ngSubmit)="OnSubmit()" #tiendaForm="ngForm">
+    <div class="row">
+        <div class="col">
+            <div>
+                <label>Sucursal</label>
+                <input
+                class="form-control my-2"
+                placeholder="Sucursal"
+                name="sucursal"
+                [(ngModel)]="tienda.sucursal"
+                #sucursal="ngModel"
+                required
+                >
+                <div *ngIf="sucursal.invalid && (sucursal.dirty || sucursal.touched)" class="text-danger">
+                    <div>
+                        Sucursal es requerido
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div>
+                <label>Direccion</label>
+                <input
+                class="form-control my-2"
+                placeholder="Direccion"
+                name="direccion"
+                [(ngModel)]="tienda.direccion"
+                #direccion="ngModel"
+                required
+                >
+                <div *ngIf="direccion.invalid && (direccion.dirty || direccion.touched)" class="text-danger">
+                    <div>
+                        Direccion es requerido
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div >
+        <button [disabled]="!tiendaForm.form.valid" type="submit" class="btn btn-primary">Guardar</button>
+        <button type="button" class="btn btn-success mx-2"(click)="clean()">Limpiar</button>
+    </div>
+</form>
