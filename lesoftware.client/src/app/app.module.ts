@@ -9,6 +9,11 @@ import { FormComponent } from './clientes/form/form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { LoginComponent } from './login/login.component';
+import { LayoutComponent } from './shared/layout/layout.component';
+import { TiendasComponent } from './tiendas/tiendas.component';
+import { ArticulosComponent } from './articulos/articulos.component';
+import { ArticulosFormComponent } from './articulos/form/form.component';
+import { CarritoComponent } from './carrito/carrito.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +21,11 @@ import { LoginComponent } from './login/login.component';
     ClientesComponent,
     FormComponent,
     LoginComponent,
+    LayoutComponent,
+    TiendasComponent,
+    ArticulosComponent,
+    ArticulosFormComponent,
+    CarritoComponent
   ],
   imports: [
     BrowserModule, HttpClientModule,

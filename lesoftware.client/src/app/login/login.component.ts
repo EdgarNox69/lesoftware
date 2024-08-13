@@ -46,7 +46,7 @@ export class LoginComponent implements OnInit{
             console.log('Se hizo el get',datos)
             localStorage.setItem('user', JSON.stringify(datos))
           })
-          this.router.navigateByUrl('/clientes')
+          this.router.navigateByUrl('/layout/clientes')
           this.loginForm.reset()
         }
       })

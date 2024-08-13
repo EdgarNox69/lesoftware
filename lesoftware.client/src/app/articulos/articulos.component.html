@@ -1,0 +1,41 @@
+<div class="container col-md-10 col-sm-12"> 
+    <h2>Listado de Articulos</h2>
+    <div class="row">
+        <div id="formulario">
+           <articulos-form (newArticuloEvent)="addarticulo($event)" [articulo]="articuloSelected"></articulos-form>
+        </div>
+        <div class="table-responsive row my-4 ">
+
+            @if (articulos.length > 0){
+                
+                <table class="table table-hover table-striped table-bordered">
+                    <thead>
+                        <th>Codigo</th>
+                        <th>Descripcion</th>
+                        <th>Precio</th>
+                        <th>Stock</th>
+                        <th>Acciones</th>
+                    </thead>
+                    <tbody>
+                        @for (articulo of articulos; track $index) {
+                            <tr>
+                                <td>{{articulo.codigo}}</td>
+                                <td>{{articulo.descripcion}}</td>
+                                <td>{{articulo.precio}}</td>
+                                <td>{{articulo.stock}}</td>
+                                <td>
+                                    <button class="btn btn-sm btn-secondary" (click)="onEditar(articulo)"><i class="bi bi-pencil-square"></i></button>
+                                    <button class="btn btn-sm btn-danger" (click)="onDelete(articulo)"><i class="bi bi-trash"></i></button>
+                                    <button class="btn btn-sm btn-primary" (click)="OnAddCarrito(articulo)"><i class="bi bi-cart"></i></button>
+                                </td> 
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            }@else {
+                <div class="alert alert-info">Lo sentimos, no existen usuarios en el sistema!</div>
+            }
+        </div>
+    </div>
+    
+</div>

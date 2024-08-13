@@ -29,7 +29,7 @@ export class ClientesService {
 
   create(cliente:Cliente): Observable<Cliente>{
     return this.http
-    .post<Cliente>(url_base+'Cliente/agregar', cliente)
+    .post<Cliente>(url_base+'Account/registrar', cliente)
     .pipe(map(res=>{
       return res
     }))

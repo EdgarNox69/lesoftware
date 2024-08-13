@@ -1,0 +1,83 @@
+<form (ngSubmit)="OnSubmit()" #articuloForm="ngForm">
+    <div class="row">
+        <div class="col">
+            <div>
+                <label>Codigo</label>
+                <input
+                class="form-control my-2"
+                placeholder="Codigo"
+                name="codigo"
+                [(ngModel)]="articulo.codigo"
+                #codigo="ngModel"
+                required
+                >
+                <div *ngIf="codigo.invalid && (codigo.dirty || codigo.touched)" class="text-danger">
+                    <div>
+                        codigo es requerido
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div>
+                <label>Descripcion</label>
+                <input
+                class="form-control my-2"
+                placeholder="Descripcion"
+                name="descripcion"
+                [(ngModel)]="articulo.descripcion"
+                #descripcion="ngModel"
+                required
+                >
+                <div *ngIf="descripcion.invalid && (descripcion.dirty || descripcion.touched)" class="text-danger">
+                    <div>
+                        descripcion es requerido
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div>
+                <label>Precio</label>
+                <input
+                class="form-control my-2"
+                placeholder="Precio"
+                name="precio"
+                [(ngModel)]="articulo.precio"
+                #precio="ngModel"
+                type="number"
+                required
+                >
+                <div *ngIf="precio.invalid && (precio.dirty || precio.touched)" class="text-danger">
+                    <div>
+                        precio es requerido
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div>
+                <label>Stock</label>
+                <input
+                class="form-control my-2"
+                placeholder="Stock"
+                name="stock"
+                [(ngModel)]="articulo.stock"
+                #stock="ngModel"
+                type="number"
+                required
+                >
+                <div *ngIf="stock.invalid && (stock.dirty || stock.touched)" class="text-danger">
+                    <div>
+                        stock es requerido
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div >
+        <button [disabled]="!articuloForm.form.valid" type="submit" class="btn btn-primary">Guardar</button>
+        <button type="button" class="btn btn-success mx-2"(click)="clean()">Limpiar</button>
+    </div>
+
+</form>
