@@ -23,7 +23,13 @@
             {{cliente}}
           </a>
         </div>
-         <a class="nav-link active" aria-current="page" routerLink="carrito"><i class="bi bi-cart"></i>Carrito</a>
+        <div id="carrito">
+          <a class="nav-link active" aria-current="page" routerLink="carrito"><i class="bi bi-cart"></i>Carrito</a>
+        </div>
+
+         <div>
+          <a class="nav-link active" aria-current="page" routerLink="carrito"><i class="bi bi-box-arrow-right" (click)="logout()"></i>Salir</a>
+         </div>
       </div>
     </div>
   </nav>

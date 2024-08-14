@@ -6,6 +6,7 @@ import { LayoutComponent } from './shared/layout/layout.component';
 import { TiendasComponent } from './tiendas/tiendas.component';
 import { ArticulosComponent } from './articulos/articulos.component';
 import { CarritoComponent } from './carrito/carrito.component';
+import { isLoggedGuard } from './core/guards/is-logged.guard';
 
 const routes: Routes = [
   {
@@ -16,6 +17,7 @@ const routes: Routes = [
   {
     path:'layout',
     component:LayoutComponent,
+    canMatch: [isLoggedGuard],
     children:[
       {
         path:'clientes',

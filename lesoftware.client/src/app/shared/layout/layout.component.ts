@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { LayoutService } from '../../core/services/layout.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-layout',
@@ -8,7 +9,7 @@ import { LayoutService } from '../../core/services/layout.service';
 })
 export class LayoutComponent implements OnInit{
 
-  constructor(private service:LayoutService){}
+  constructor(private service:LayoutService, private router:Router){}
   cliente:string = ''
   ngOnInit(): void {
     const storedData:any = localStorage.getItem('user')
@@ -19,5 +20,10 @@ export class LayoutComponent implements OnInit{
         this.cliente = res.nombre
       }
     })
+  }
+
+  logout(){
+    this.service.logout()
+    this.router.navigate(['/'])
   }
 }

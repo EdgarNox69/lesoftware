@@ -22,10 +22,10 @@ namespace lesoftware.Server.Controllers
         private readonly TiendaContext context;
         private readonly IMapper mapper;
         private readonly IConfiguration _configuration;
-        
-        static string cadena = "Data Source=EDGARPC;Initial Catalog=Tienda;user id=tienda;pwd=hatter4CARGO.dissuade0complex;TrustServerCertificate=True";
+       
+        static string cadena = "Data Source=ELEON;Initial Catalog=Tienda;user id=tienda;pwd=Trickedout1;TrustServerCertificate=True";
 
-        public AccountController(TiendaContext context, IMapper mapper, IConfiguration configuration)
+        public AccountController(TiendaContext context, IMapper mapper, IConfiguration configuration )
 
         {
             this.context = context;

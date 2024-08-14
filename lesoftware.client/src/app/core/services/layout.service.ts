@@ -14,4 +14,9 @@ export class LayoutService {
   cliente(clienteId:number): Observable<Cliente>{
     return this.http.post<Cliente>(url_base+'Cliente/cliente', clienteId)
   }
+
+  logout(){
+    sessionStorage.removeItem("token")
+    localStorage.removeItem("user")
+  }
 }
