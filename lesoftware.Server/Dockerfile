@@ -16,7 +16,7 @@ RUN dotnet build "./lesoftware.Server.csproj" -c $BUILD_CONFIGURATION -o /app/bu
 # Esta fase se usa para publicar el proyecto de servicio que se copiará en la fase final.
 FROM build AS publish
 ARG BUILD_CONFIGURATION=Release
-RUN dotnet publish "./lesoftware.Server.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
+RUN dotnet publish "./lesoftware.Server.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=true
 
 # Esta fase se usa en producción o cuando se ejecuta desde VS en modo normal (valor predeterminado cuando no se usa la configuración de depuración)
 FROM mcr.microsoft.com/dotnet/runtime-deps:8.0 AS final
