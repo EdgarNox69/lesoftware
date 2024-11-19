@@ -1,37 +1,25 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Tienda</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" routerLink="clientes">Clientes</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" routerLink="tiendas">Tiendas</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" routerLink="articulos">Articulos</a>
-          </li>
-         
-        </ul>
-        <div class="container-fluid">
-          <a class="navbar-brand">
-            <i class="bi bi-person"></i>
-            {{cliente}}
-          </a>
-        </div>
-        <div id="carrito">
-          <a class="nav-link active" aria-current="page" routerLink="carrito"><i class="bi bi-cart"></i>Carrito</a>
-        </div>
-
-         <div>
-          <a class="nav-link active" aria-current="page" routerLink="carrito"><i class="bi bi-box-arrow-right" (click)="logout()"></i>Salir</a>
-         </div>
+<header>
+  <div class="container">
+      <div class="row">
+          <div class="col-md-3 col-sm-3 col-3">
+              <div class="logo">
+                  <img src="assets/hano_logo.png" class="logo" alt="">
+              </div>
+          </div>
+          <div class="col-md-9 col-sm-9 col-9 text-end">
+              <div class="menu-icon" >
+                  <i></i>
+              </div>
+              <div class="desktop_menu" [class.mobile_menu]="">
+                  <ul>
+                      <li>Home</li>
+                      <li>About</li>
+                      <li>Courses</li>
+                      <li>Contact</li>
+                  </ul>
+              </div>
+          </div>
       </div>
-    </div>
-  </nav>
-  <router-outlet></router-outlet>
+  </div>
+</header>
   

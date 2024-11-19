@@ -7,40 +7,46 @@ import { TiendasComponent } from './tiendas/tiendas.component';
 import { ArticulosComponent } from './articulos/articulos.component';
 import { CarritoComponent } from './carrito/carrito.component';
 import { isLoggedGuard } from './core/guards/is-logged.guard';
+import { CurriculumComponent } from './curriculum/curriculum.component';
 
 const routes: Routes = [
   {
     path:'',
-    redirectTo:'login',
+    redirectTo:'/curriculum',
     pathMatch:'full'
   },
   {
     path:'layout',
     component:LayoutComponent,
-    canMatch: [isLoggedGuard],
+    //canMatch: [isLoggedGuard],
     children:[
-      {
-        path:'clientes',
-        component:ClientesComponent
-      },
-      {
-        path:'tiendas',
-        component:TiendasComponent
-      },
-      {
-        path:'articulos',
-        component:ArticulosComponent
-      },
-      {
-        path:'carrito',
-        component:CarritoComponent
-      },
-      {
-        path:'tienda',
-        component:TiendasComponent
-      }
     ]
   },
+  {
+    path:'clientes',
+    component:ClientesComponent
+  },
+  {
+    path:'tiendas',
+    component:TiendasComponent
+  },
+  {
+    path:'articulos',
+    component:ArticulosComponent
+  },
+  {
+    path:'carrito',
+    component:CarritoComponent
+  },
+  {
+    path:'tienda',
+    component:TiendasComponent
+  },
+  {
+    path:'curriculum',
+    component:CurriculumComponent
+  },
+
   {
     path:'login',
     component:LoginComponent
