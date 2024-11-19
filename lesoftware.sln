@@ -3,9 +3,14 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.35122.118
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lesoftware.Server", "lesoftware.Server\lesoftware.Server.csproj", "{E21AD298-C601-4C65-AA62-E8D8A6816472}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lesoftware.Server", "lesoftware.Server\lesoftware.Server.csproj", "{E21AD298-C601-4C65-AA62-E8D8A6816472}"
 EndProject
 Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "lesoftware.client", "lesoftware.client\lesoftware.client.esproj", "{EA42060D-8E52-4F21-81F4-9746A62B6C52}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Elementos de la solución", "Elementos de la solución", "{E8637C8F-52CF-4D81-8997-152A8A711B66}"
+	ProjectSection(SolutionItems) = preProject
+		railway.toml = railway.toml
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
