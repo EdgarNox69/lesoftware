@@ -1,6 +1,6 @@
 [build]
 builder = "dockerfile"
-dockerfilePath = "./RailwayDeploymentAot/Dockerfile"
+dockerfilePath = "./lesoftware.Server/Dockerfile"
 
 [deploy]
 startCommand = "./lesoftware.Server.dll"
